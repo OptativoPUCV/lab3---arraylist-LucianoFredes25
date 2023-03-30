@@ -76,5 +76,5 @@ int get_size(ArrayList * l){
 
 //remove elements
 void clean(ArrayList * l){
-  printf("lol");
+  printf("%d %d",l->size , l->capacity);
 }
