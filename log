@@ -214,3 +214,13 @@ Thu 30 Mar 2023 03:54:19 PM UTC:
  tests:  1|5
 total_score: 10/70
 8349dab
+Thu 30 Mar 2023 03:55:24 PM UTC: 
+ arraylist.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:27:13: error: expected expression before ‘;’ token
+   27 |   l->size **;
+      |             ^
+Compilation failed
+fc52d02
