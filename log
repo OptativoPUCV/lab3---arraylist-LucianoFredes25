@@ -95,3 +95,18 @@ arraylist.c:16:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__
 arraylist.c:16:14: error: expected expression before ‘.’ token
 Compilation failed
 8b0c769
+Thu 30 Mar 2023 03:37:58 PM UTC: 
+ arraylist.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:16:12: error: unused variable ‘dato’ [-Werror=unused-variable]
+   16 |     void * dato = (void *) malloc(sizeof(void));
+      |            ^~~~
+arraylist.c:18:16: error: ‘dato’ undeclared (first use in this function)
+   18 |   List->data = dato;
+      |                ^~~~
+arraylist.c:18:16: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+925ca5c
