@@ -110,3 +110,18 @@ arraylist.c:18:16: note: each undeclared identifier is reported only once for ea
 cc1: all warnings being treated as errors
 Compilation failed
 925ca5c
+Thu 30 Mar 2023 03:38:29 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:16:12: error: unused variable ‘dato’ [-Werror=unused-variable]
+   16 |     void * dato = (void *) malloc(sizeof(void *));
+      |            ^~~~
+arraylist.c:18:16: error: ‘dato’ undeclared (first use in this function)
+   18 |   List->data = dato;
+      |                ^~~~
+arraylist.c:18:16: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+35f569a
