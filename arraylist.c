@@ -16,12 +16,17 @@ ArrayList *createList(void) {
     List->data = (void *) malloc(sizeof(void *));
   }
   List->capacity = 2;
-  //List->size = 0;
+  List->size = 0;
   return List;
 }
 
 void append(ArrayList * l, void * data){
-
+  if(l->size == l->capacity){
+    l->capacity * 2;
+    l->data = realloc(data , l->capacity);
+  }
+  l->data[l->size] = data;
+  l->size++;
 }
 
 void push(ArrayList * l, void * data, int i){
