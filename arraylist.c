@@ -79,6 +79,5 @@ void clean(ArrayList * l){
   for(int j = 0 ; j < l->size ; j++)
       l->data[j] = NULL;
   l->capacity = 2;
-  l->data = realloc(l->data , l->capacity);
   l->size=0;
 }
