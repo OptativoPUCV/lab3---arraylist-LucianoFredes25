@@ -45,15 +45,17 @@ void* pop(ArrayList * l, int i){
     void * Aux = l->data[i];
     for(int j = i ; j < l->size - 1; j++)
       l->data[j]= l->data[j+1];
+    l->size --;
     return Aux;
   }
   else{
     void * Aux2 = l->data[l->size + i];
     for(int j = l->size + i ; j < l->size - 1; j++)
       l->data[j]= l->data[j+1];
+    l->size --;
     return Aux2;
   }
-  l->size --;
+  
 }
 
 void* get(ArrayList * l, int i){
