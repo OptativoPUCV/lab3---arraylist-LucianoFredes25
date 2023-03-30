@@ -21,13 +21,13 @@ ArrayList *createList(void) {
 }
 
 void append(ArrayList * l, void * data){
-  l->capacity = l->capacity * 2;
-  printf("%d", l->capacity);
-  /*if(l->size == l->capacity){
+  if(l->size == l->capacity){
+    l->capacity = l->capacity * 2;
+    printf("%d", l->capacity);
     l->data = realloc(data , l->capacity);
   }
   l->data[l->size] = data;
-  l->size++;*/
+  l->size++;
 }
 
 void push(ArrayList * l, void * data, int i){
