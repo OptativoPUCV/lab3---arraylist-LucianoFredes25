@@ -23,7 +23,7 @@ void append(ArrayList * l, void * data){
     l->capacity = l->capacity * 2;
     l->data = realloc(data , l->capacity);
   }
-  l->data = data;
+  l->data[l->size] = data;
   l->size ++;
 }
 
