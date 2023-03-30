@@ -23,8 +23,7 @@ void append(ArrayList * l, void * data){
     l->capacity = l->capacity * 2;
     l->data = realloc(data , l->capacity);
   }
-  l->data[l->size] = data;
-  l->size ++;
+  printf("%d", l->size);
 }
 
 void push(ArrayList * l, void * data, int i){
