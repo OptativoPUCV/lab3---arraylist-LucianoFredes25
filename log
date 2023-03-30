@@ -23,3 +23,14 @@ Thu 30 Mar 2023 03:31:28 PM UTC:
  tests:  0|6
 total_score: 0/70
 f55d422
+Thu 30 Mar 2023 03:34:34 PM UTC: 
+ arraylist.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:16:9: error: ‘*List.data’ is used uninitialized [-Werror=uninitialized]
+   16 |     List->data[i] = NULL;
+      |     ~~~~^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cd92318
