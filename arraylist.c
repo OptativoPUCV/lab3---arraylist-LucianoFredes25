@@ -76,8 +76,10 @@ int get_size(ArrayList * l){
 
 //remove elements
 void clean(ArrayList * l){
-  free(l->data);
-  l->data = realloc(l->data, sizeof(void *) * 2);
-  l->capacity = 2;
-  l->size=0;
+    void **new_data = realloc(l->data, sizeof(void *) * 2);
+    if (new_data != NULL) {
+        l->data = new_data;
+        l->capacity = 2;
+    }
+    l->size = 0;
 }
