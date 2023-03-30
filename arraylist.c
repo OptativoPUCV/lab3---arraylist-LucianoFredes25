@@ -76,7 +76,7 @@ int get_size(ArrayList * l){
 
 void clean(ArrayList * l){
   for(int i = 0 ; i < l->size ; i++)
-    l->data[i] = 0;
+    l->data[i] = NULL;
   l->size = 0;
   l->capacity = 2;
 }
