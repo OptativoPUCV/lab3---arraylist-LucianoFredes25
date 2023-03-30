@@ -76,7 +76,7 @@ int get_size(ArrayList * l){
 
 void clean(ArrayList * l){
   free(l->data);
-  l->data = (void **) malloc(sizeof(void *) * (l->capacity));
   l->size = 0;
   l->capacity = 2;
+  l->data = (void **) malloc(sizeof(void *) * (l->capacity));
 }
